@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aao Weather Jane...</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body >
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Shivam's Weather Dashboard</h1>
+            <!-- <p class="subtitle">Get real-time weather information for any city</p> -->
+            <p class="subtitle">Aao Wheather Jane!!</p>
+        </header>
+
+        <main class="main">
+            <!-- Search Section -->
+            <div class="search-section">
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="cityInput" 
+                        class="search-input" 
+                        placeholder="Enter city name..."
+                    >
+                    <button id="searchBtn" class="search-btn">Search</button>
+                </div>
+                <button id="locationBtn" class="location-btn">
+                    📍 Use My Location
+                </button>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loading" class="loading hidden">
+                <div class="loading-spinner"></div>
+                <p>Loading weather data...</p>
+            </div>
+
+            <!-- Error Message -->
+            <div id="error" class="error hidden">
+                <p id="errorMessage">Something went wrong. Please try again.</p>
+            </div>
+
+            <!-- Weather Display -->
+            <div id="weatherDisplay" class="weather-display hidden">
+                <!-- Current Weather -->
+                <div class="current-weather">
+                    <div class="current-header">
+                        <div class="city-info">
+                            <h2 id="cityName">City Name</h2>
+                            <p id="currentDate">Date</p>
+                        </div>
+                        <button id="favoriteBtn" class="favorite-btn">
+                            ❤️
+                        </button>
+                    </div>
+                    
+                    <div class="current-main">
+                        <div class="temperature-section">
+                            <div class="temp-display">
+                                <span id="currentTemp">0</span>°C
+                            </div>
+                            <div class="weather-icon">
+                                <img id="weatherIcon" src="" alt="Weather" />
+                            </div>
+                        </div>
+                        <div class="weather-description">
+                            <p id="weatherDesc">Clear sky</p>
+                            <p id="feelsLike">Feels like 0°C</p>
+                        </div>
+                    </div>
+
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Humidity</span>
+                            <span id="humidity" class="detail-value">0%</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Wind Speed</span>
+                            <span id="windSpeed" class="detail-value">0 m/s</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Pressure</span>
+                            <span id="pressure" class="detail-value">0 hPa</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Visibility</span>
+                            <span id="visibility" class="detail-value">0 km</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5-Day Forecast -->
+                <div class="forecast-section">
+                    <h3>5-Day Forecast</h3>
+                    <div id="forecastContainer" class="forecast-container">
+                        <!-- Forecast items will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Favorites Section -->
+            <div class="favorites-section">
+                <h3>Favorite Cities</h3>
+                <div id="favoritesContainer" class="favorites-container">
+                    <p class="no-favorites">No favorite cities yet</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+
+
+    <footer style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; padding: 30px; background-color: #f1f1f1; margin-top: 550px;">
+
+        <div style="text-align: center; justify-content: space-around; font-size: erge;"> 
+
+             <h5>Weather Dashboard © 2023</h5><br>
+            <h5>All Rights are reserved by Shivam Verma.</h5>
+        </div>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
